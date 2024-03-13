@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Dog;
 
+import java.util.Date;
+
 /**
  * @author leon on 4/19/18.
  */
@@ -28,4 +30,28 @@ public class DogTest {
         String dogName = dog.getName();
         Assert.assertEquals(dogName, givenName);
     }
+
+    @Test
+    public void testSpeak() {
+        String givenSpeak = "bark!";
+
+        Dog dog = new Dog(null, null, null);
+
+        String retrievedSpeak = dog.speak();
+
+        Assert.assertEquals(givenSpeak, retrievedSpeak);
+    }
+
+    @Test
+    public void testSetBirthDate() {
+        Date givenBirthDate = new Date();
+
+        Dog dog = new Dog(null, givenBirthDate, null);
+
+        Date retrievedBirthDate = dog.getBirthDate();
+
+        Assert.assertEquals(givenBirthDate, retrievedBirthDate);
+    }
+
+
 }

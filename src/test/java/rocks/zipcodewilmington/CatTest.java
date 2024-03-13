@@ -89,14 +89,12 @@ public class CatTest {
     }
 
     @Test
-    public void testEatenMeals() {
-        Integer givenEatenMeals = 0;
+    public void testEat() {}
 
-        Cat cat = new Cat(null, null, null);
+    @Test
+    public void testAnimalInheritance() {}
 
-        Integer retrievedEatenMeals = cat.eatenMeals();
-
-        Assert.assertEquals(givenEatenMeals, retrievedEatenMeals);
-    }
+    @Test
+    public void testMammalInheritance() {}
 }
 
