@@ -40,4 +40,63 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
+    @Test
+    public void testSetName() {
+        // Given (cat data)
+        String givenName = "Zula";
+
+        // When (a cat is constructed)
+        Cat cat = new Cat(givenName, null, null);
+
+        // When (we retrieve data from the cat)
+        String retrievedName = cat.getName();
+
+        // Then (we expect the given data, to match the retrieved data)
+        Assert.assertEquals(givenName, retrievedName);
+    }
+
+    @Test
+    public void testSetBirthDate() {
+        Date givenBirthDate = new Date();
+
+        Cat cat = new Cat(null, givenBirthDate, null);
+
+        Date retrievedBirthDate = cat.getBirthDate();
+
+        Assert.assertEquals(givenBirthDate, retrievedBirthDate);
+    }
+
+    @Test
+    public void testGetId() {
+        Integer givenId = 0;
+
+        Cat cat = new Cat(null, null, givenId);
+
+        Integer retrievedId = cat.getId();
+
+        Assert.assertEquals(givenId, retrievedId);
+    }
+
+    @Test
+    public void testSpeak() {
+        String givenSpeak = "meow!";
+
+        Cat cat = new Cat(null, null, null);
+
+        String retrievedSpeak = cat.speak();
+
+        Assert.assertEquals(givenSpeak, retrievedSpeak);
+    }
+
+    @Test
+    public void testEatenMeals() {
+        Integer givenEatenMeals = 0;
+
+        Cat cat = new Cat(null, null, null);
+
+        Integer retrievedEatenMeals = cat.eatenMeals();
+
+        Assert.assertEquals(givenEatenMeals, retrievedEatenMeals);
+    }
 }
+
